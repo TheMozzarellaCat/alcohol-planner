@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alcohol Planner</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Alcohol Planner</h1>
+        <form id="planner-form">
+            <label for="days">Number of Days:</label>
+            <input type="number" id="days" name="days" min="1" required>
+
+            <label for="people">Number of People:</label>
+            <input type="number" id="people" name="people" min="1" required>
+
+            <button type="submit">Generate Plan</button>
+        </form>
+        
+        <div id="plan-output" class="hidden">
+            <h2>Your Alcohol Plan</h2>
+            <div id="plan-details"></div>
+            <button id="download-plan">Download Plan</button>
+        </div>
+    </div>
+</body>
+</html>
