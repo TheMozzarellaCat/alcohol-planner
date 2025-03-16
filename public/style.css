@@ -1,57 +1,113 @@
 body {
-  font-family: Arial, sans-serif;
-  background-color: #fdf0d5;
-  color: #003049;
+  margin: 0;
+  padding: 0;
+  height: 100vh; 
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  margin: 0;
+  background-color: white;
 }
 
 .container {
-  background: white;
+  width: 90%;
+  max-width: 600px;
   padding: 20px;
+  background: #f8f8f8;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
-  width: 300px;
 }
 
 h1 {
-  color: #c1121f;
+  font-size: 24px;
+  margin-bottom: 15px;
 }
 
 label {
   display: block;
   margin-top: 10px;
+  font-weight: bold;
 }
 
-input {
+input, select {
   width: 100%;
   padding: 8px;
   margin-top: 5px;
-  border: 1px solid #003049;
+  border: 1px solid #ccc;
   border-radius: 5px;
+  font-size: 16px;
 }
 
+.person {
+  position: relative;
+  background: #ffffff;
+  padding: 15px;
+  margin-top: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.gender-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
 button {
-  background: #c1121f;
+    flex: 1;
+    padding: 8px;
+    border: 2px solid #ccc;
+    background: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+
+    
+  }
+button.active {
+      border-color: #007bff;
+      background: #007bff;
+      color: white;
+    }
+
+.delete-person {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #ff4d4d;
   color: white;
   border: none;
-  padding: 10px;
-  margin-top: 15px;
-  width: 100%;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  font-size: 16px;
   cursor: pointer;
+}
+
+#add-person, #generate-plan {
+  width: 100%;
+  margin-top: 15px;
+  padding: 10px;
+  font-size: 18px;
+  border: none;
   border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-button:hover {
-  background: #780000;
-}
+#add-person {
+  background: #28a745;
+  color: white;
 
-.hidden {
-  display: none;
 }
+#add-person:hover {
+    background: #218838;
+  }
 
-/*# sourceMappingURL=style.css.map */
+#generate-plan {
+  background: #007bff;
+  color: white;
+
+}
+#generate-plan:hover {
+    background: #0056b3;
+  }
